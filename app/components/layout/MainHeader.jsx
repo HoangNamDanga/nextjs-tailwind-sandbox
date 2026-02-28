@@ -1,6 +1,7 @@
 "use client";
 import React, { useContext } from "react";
 import { MenuContext } from "@/context/MenuContext";
+import UserAreaSelectBox from "./UserAreaSelectBox";
 import { FaBars } from "react-icons/fa";
 const MainHeader = () => {
   const { toggle } = useContext(MenuContext); // phần này sẽ kích hoạt context
@@ -11,7 +12,9 @@ const MainHeader = () => {
         <div onClick={toggle} className="lg:hidden">
           <FaBars className="cursor-pointer" />
         </div>
-        <div>User Area</div>
+        <div>
+          <UserAreaSelectBox></UserAreaSelectBox>
+        </div>
       </div>
     </div>
   );

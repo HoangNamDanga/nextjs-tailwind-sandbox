@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import MainLayout from "../app/components/MainLayout";
+import MainLayout from "./components/layout/MainLayout";
 import MenuContextProvider from "../context/MenuContext";
 export const metadata: Metadata = {
   title: "Nextjs Tailwind SandBox",

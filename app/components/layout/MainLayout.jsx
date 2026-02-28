@@ -2,7 +2,7 @@
 
 import React, { useContext } from "react";
 import { MenuContext } from "@/context/MenuContext";
-import MainHeader from "../components/MainHeader";
+import MainHeader from "./MainHeader";
 import Link from "next/link";
 
 import { AiOutlineHome } from "react-icons/ai";
