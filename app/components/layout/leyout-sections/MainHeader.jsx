@@ -1,9 +1,10 @@
 "use client";
 import React, { useContext } from "react";
 import { MenuContext } from "@/context/MenuContext";
-import UserAreaSelectBox from "./UserAreaSelectBox";
-import LanguageSelectBox from "./LanguageSelectBox";
+import UserAreaSelectBox from "../leyout-sections/UserAreaSelectBox";
+import LanguageSelectBox from "../leyout-sections/LanguageSelectBox";
 import { FaBars } from "react-icons/fa";
+
 const MainHeader = () => {
   const { toggle } = useContext(MenuContext); // phần này sẽ kích hoạt context
   return (

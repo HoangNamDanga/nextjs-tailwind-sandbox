@@ -50,3 +50,4 @@ const CustomSelectBox = () => {
 };
 
 export default CustomSelectBox;
+//file này đc gắn vào trong page.jsx thuộc  C:\Users\admin\Desktop\ReactStudyB1\nextjs-tailwind-sandbox\app\singular\selectbox\page.jsx
