@@ -2,26 +2,18 @@
 @plugin 'tailwind-scrollbar';
 
 :root {
+  /* Màu nền chung của toàn bộ trang (giữ nguyên kể cả dark mode nếu muốn) */
   --background: #ffffff;
   --foreground: #171717;
 }
-
 @theme inline {
+  --color-header-bg: var(--header-bg);
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
-
 body {
-  background: var(--background);
+  background-color: var(--background); /* Luôn là màu ở :root nếu .dark không ghi đè */
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+@variant dark (&:where(.dark, .dark *));

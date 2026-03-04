@@ -8,7 +8,7 @@ import MobileButtonNavigation from "../layout/leyout-sections/MobileButtonNaviga
 const MainLayout = ({ children }) => {
   const { open } = useContext(MenuContext);
   return (
-    <div className="bg-green-200 min-h-screen">
+    <div className="bg-green-200 min-h-screen dark:bg-slate-700">
       <MainSidebar />
       <div className={`${open ? "max-lg:blur-xl" : "blur-0"}`}>
         <MainHeader />

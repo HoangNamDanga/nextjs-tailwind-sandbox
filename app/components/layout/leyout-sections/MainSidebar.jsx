@@ -15,7 +15,7 @@ const MainSidebar = () => {
   };
   return (
     <aside
-      className={`bg-white top-0 left-0 h-screen transition-all duration-300 z-50 fixed
+      className={`bg-white dark:bg-slate-600 dark:text-white top-0 left-0 h-screen transition-all duration-300 z-50 fixed
           ${open ? "w-60 p-4" : "w-0 p-0 hidden"}
           lg:block lg:w-60 lg:p-4 lg:fixed lg:top-16 lg:left-8 lg:h-auto lg:rounded-lg shadow-sm
         `}
@@ -56,6 +56,37 @@ const MainSidebar = () => {
               <SiSinglestore />
               <Link href="/singular/selectbox" onClick={closeSeideBarHandler}>
                 Select Box
+              </Link>
+            </li>
+
+            <li className="flex justify-items-center-safe items-center gap-3">
+              <SiSinglestore />
+              <Link href="/singular/modal" onClick={closeSeideBarHandler}>
+                Modal
+              </Link>
+            </li>
+
+            <li className="flex justify-items-center-safe items-center gap-3">
+              <SiSinglestore />
+              <Link href="/singular/rh-form" onClick={closeSeideBarHandler}>
+                R.H.Form
+              </Link>
+            </li>
+
+            <li className="flex justify-items-center-safe items-center gap-3">
+              <SiSinglestore />
+              <Link href="/singular/rhf-yup" onClick={closeSeideBarHandler}>
+                R.H.F-YUP
+              </Link>
+            </li>
+
+            <li className="flex justify-items-center-safe items-center gap-3">
+              <SiSinglestore />
+              <Link
+                href="/singular/context-menu"
+                onClick={closeSeideBarHandler}
+              >
+                Contect Menu
               </Link>
             </li>
           </ul>

@@ -50,17 +50,20 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
     setStep((prev) => prevMap[prev] || prev);
   };
 
+  // Dùng Computed Property Names
+  // Thay vì viết 10 hàm xử lý cho 10 ô nhập liệu khác nhau, chỉ cần duy nhất một hàm này để quản lý toàn bộ dữ liệu
+  // Khi ng dùng gõ phím hoặc click vào một ô input, trình duyệt tạo ra một đối tượng Event (sự kiện)
   const handleChangeInput = (event) => {
-    const fieldName = event.target.name;
-    let fieldValue;
+    const fieldName = event.target.name; //event.target: Chính là cái ô input mà người dùng vừa tác động vào, name chính là thuộc tính name trong thẻ HTML
+    let fieldValue; // Xác định "Tên ô nhập liệu" (fieldName)
     if (fieldName === "agreeToTerms") {
-      fieldValue = event.target.checked;
+      fieldValue = event.target.checked; // với Checkbox phải lấy checked trả về true/false
     } else {
-      fieldValue = event.target.value;
+      fieldValue = event.target.value; // với các ô khác thì lấy bằng value
     }
     setFormData({
-      ...formData,
-      [fieldName]: fieldValue,
+      ...formData, // ý nghĩa , hãy copy toàn bộ dữ liệu cũ đang có trong formData ra đây
+      [fieldName]: fieldValue, // Computed Property Names
     });
   };
 
@@ -81,9 +84,11 @@ const SimpleMultiStepForm = ({ showStepNumber }) => {
   //Section for render StepNumbers
   const renderTopStepNumbers = () => {
     if (!showStepNumber || step === "Final") {
+      // nếu showStepNumber = false || step = "Final"
       return null;
     }
     return (
+      // Vẽ ra các vòng trong số 1,2,3,4 trên UI <=> các bước A , B , C , D
       <section className="mt-2 mb-4 flex justify-between">
         {stepsArray.map((item) => (
           <div

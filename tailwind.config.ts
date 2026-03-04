@@ -3,9 +3,11 @@ import type { Config } from "tailwindcss";
 import tailwindScrollbar from 'tailwind-scrollbar'; 
 
 const config: Config = {
+  darkMode: 'class', // cấu hình dark theme
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {},
